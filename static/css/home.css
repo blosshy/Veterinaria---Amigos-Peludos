@@ -1,0 +1,301 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(114, 183, 247);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(14, 14, 104);
+    margin: 0;
+    font-size: 3rem;
+    font-family: 'Merriweather Sans', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(18, 117, 209);
+    padding: 2rem;
+}
+
+.nav p{
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.nav-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us__image {
+    flex: 0 0 50%;
+    margin: 3rem;
+}
+
+.about-us__content {
+    flex: 0 0 50%;
+    padding-left: 30px;
+}
+
+.about-us__content h2 {
+    text-align: center;
+    color: rgb(14, 14, 104);
+    font-family: 'Merriweather Sans', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.about-us__content p {
+    line-height: 1.5;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+    word-spacing: 2px;
+}
+
+.titulo{
+    font-size: 2rem;
+    color: rgb(14, 14, 104);
+    font-weight: 500;
+    font-family: 'Merriweather Sans', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.separador{
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgb(18, 117, 209);
+}
+
+.separador p{
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+}
+
+.form-title{
+    color: rgb(14, 14, 104);
+    letter-spacing: 2px;
+}
+
+.form-label{
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+}
+
+.link-form{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(14, 14, 104);
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 500;
+}
+
+.link-form:hover{
+    text-decoration: none;
+}
+
+
+.horarios-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 40px;
+    text-align: center;
+}
+
+.horarios-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.horarios-title {
+    font-size: 28px;
+    color: rgb(14, 14, 104);
+    margin-bottom: 20px;
+}
+
+.horarios-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.horarios-item {
+    margin-bottom: 10px;
+}
+
+.horarios-day {
+    font-weight: bold;
+}
+
+.horarios-time {
+    color: #666;
+}
+
+.direccion-container {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.direccion-title {
+    font-size: 28px;
+    color:  rgb(14, 14, 104);
+    margin-bottom: 10px;
+}
+
+.direccion-content {
+    color: #666;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem;
+    margin-top: 2rem;
+}
+
+.texto-footer{
+    font-family: 'Merriweather Sans', sans-serif;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-footer{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.logo-footer:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.mensaje-error{
+    color: red;
+    font-weight: 500;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.confirmation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation h3 {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.icon-confirmation {
+    height: 15rem;
+    width: 15rem;
+}
+
+.volver-icon{
+    height: 3rem;
+    width: 3rem;
+}
+
+.volver-boton{
+    background-color: rgb(114, 183, 247);
+    border: none;
+    margin: 3rem;
+    margin-right: 28rem;
+}
+
+.display{
+    display: none;
+}
+
+.separador-2{
+    margin-top: 12rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgb(18, 117, 209);
+}
+
+.separador-2 p{
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text{
+    color: black;
+    font-weight: 600;
+}
+
+.btn-padding{
+    margin-bottom: 1rem;
+}
+
+.index-link{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.index-link:hover{
+    text-decoration: none;
+}
+
+.link-container{
+  padding: 40px;
+  margin: 40px;
+  text-align: center;
+}
+

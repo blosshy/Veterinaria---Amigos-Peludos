@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Amigos Peludos</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imgs/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="separador-2 mb-4 p-4">
+        <h2 class="titulo" id="titulo-exitoso">¿ Ya tenías un turno ?</h2>
+        <p id="texto-exitoso">Llena el formulario con tus datos para que podamos hacer la consulta:</p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <form id="form-consulta" autocomplete="off">
+                    <div class="form-group mb-4">
+                        <label for="client-name" class="form-label">Nombre del Cliente:</label>
+                        <input type="text" class="form-control" id="client-name-consulta" placeholder="Ingrese el nombre del cliente" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="client-name" class="form-label">Correo electrónico:</label>
+                        <input type="email" class="form-control" id="email-consulta" placeholder="Ingrese su email" required>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <button type="submit" class="btn btn-primary">Consultar</button>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <span id="mensaje-2"></span>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="{{ url_for('index') }}" class="link-form">¿No tenés turno? Crealo aquí.</a>
+                    </div>
+                </form>
+
+                <form id="form-nuevos-datos" class="display" autocomplete="off">
+                    <div class="form-group mb-4">
+                        <label for="client-name" class="form-label">Actualiza el nombre del cliente:</label>
+                        <input type="text" class="form-control" id="new-client-name" placeholder="Ingrese el nuevo nombre del cliente" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="client-name" class="form-label">Actualiza el correo electrónico:</label>
+                        <input type="email" class="form-control" id="new-email" placeholder="Ingrese su nuevo email" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="pet-name" class="form-label">Actualiza el nombre de la Mascota:</label>
+                        <input type="text" class="form-control" id="new-pet-name" placeholder="Ingrese el nuevo nombre de la mascota" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="date" class="form-label">Actualiza la fecha del turno:</label>
+                        <input type="date" class="form-control" id="new-date" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="time" class="form-label">Actualiza la hora del Turno:</label>
+                        <input type="time" class="form-control" id="new-time" required>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <button type="submit" class="btn btn-primary">Modificar Turno</button>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <span id="mensaje-form-nuevo"></span>
+                    </div>
+                </form>
+
+                <div id="resultado-turno"></div>
+            </div>
+            <div class="col-md-12">
+                <div id="contenedor-index"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="texto-footer">Copyright 2023 "Amigos Peludos" Veterinaria | Todos los Derechos Reservados | All Rights Reserved</p>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='imgs/logo-wpp.png') }}" alt="Whatsapp" class="logo-footer">
+            <img src="{{ url_for('static', filename='imgs/logo-ig.png') }}" alt="Instagram" class="logo-footer">
+            <img src="{{ url_for('static', filename='imgs/logo-twt.png') }}" alt="Twitter" class="logo-footer">
+        </div>
+    </footer>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js"></script>
+    <script src="{{ url_for('static', filename='js/form-consulta-turno.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Amigos Peludos</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imgs/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="nav">
+        <img src="{{ url_for('static', filename='imgs/nav.png') }}" alt="Huellita" class="nav-img">
+        <div class="nav-title">
+            <h1>Veterinaria "Amigos Peludos"</h1>
+            <p>Gestión de turnos</p>
+        </div>
+        <img src="{{ url_for('static', filename='imgs/nav.png') }}" alt="Huellita" class="nav-img">
+    </div>
+
+
+    <div class="container">
+        <div class="about-us">
+            <div class="about-us__image">
+                <img src="{{ url_for('static', filename='imgs/veterinaria.jpg') }}" alt="Veterinaria Imagen">
+            </div>
+            <div class="about-us__content">
+                <h2>● Sobre Nosotros ●</h2>
+                <p>
+                    En Veterinaria "Amigos Peludos", nos apasiona el cuidado y bienestar de los animales.
+                    Contamos con un equipo de profesionales altamente capacitados y comprometidos
+                    con la salud y felicidad de tus mascotas. Ofrecemos servicios médicos,
+                    quirúrgicos, vacunaciones, consultas de rutina y más. Nos dedicamos a brindar
+                    una atención personalizada y de calidad para asegurarnos de que tus mascotas
+                    reciban el mejor cuidado posible.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="horarios-section">
+        <div class="horarios-container">
+            <h2 class="horarios-title">Horarios de atención</h2>
+            <ul class="horarios-list">
+                <li class="horarios-item">
+                    <span class="horarios-day">Lunes - Viernes:</span>
+                    <span class="horarios-time">9:00 AM - 6:00 PM</span>
+                </li>
+                <li class="horarios-item">
+                    <span class="horarios-day">Sábado:</span>
+                    <span class="horarios-time">10:00 AM - 4:00 PM</span>
+                </li>
+                <li class="horarios-item">
+                    <span class="horarios-day">Domingo:</span>
+                    <span class="horarios-time">Cerrado.</span>
+                </li>
+            </ul>
+        </div>
+        <div class="direccion-container">
+            <h3 class="direccion-title">Dirección</h3>
+            <p class="direccion-content">Calle Principal, Número 123, Ciudad.</p>
+        </div>
+    </div>
+
+    <div class="separador mb-4 p-4">
+        <h2 class="titulo">¿ Necesitas un turno ?</h2>
+        <p>¡Llena el formulario con tus datos para que te agendemos!</p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <form id="form" autocomplete="off">
+                    <div class="form-group mb-4">
+                        <label for="client-name" class="form-label">Nombre del Cliente:</label>
+                        <input type="text" class="form-control" id="client-name" placeholder="Ingrese el nombre del cliente" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="client-name" class="form-label">Correo electrónico:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su email" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="pet-name" class="form-label">Nombre de la Mascota:</label>
+                        <input type="text" class="form-control" id="pet-name" placeholder="Ingrese el nombre de la mascota" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="date" class="form-label">Fecha del Turno:</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="time" class="form-label">Hora del Turno:</label>
+                        <input type="time" class="form-control" id="time" required>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <button type="submit" class="btn btn-primary">Crear Turno</button>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <span id="mensaje"></span>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="{{ url_for('consulta_turnos') }}" class="link-form">¿Ya tenés turno? Consulte aquí.</a>
+                    </div>
+                </form>
+
+                <div class="confirmation display" id="exito">
+                    <img src="{{ url_for('static', filename='imgs/checked.png') }}" alt="checked icon" class="icon-confirmation">
+                    <h3 class="text-center m-4">¡Turno registrado exitosamente!</h3>
+                    <a href="{{ url_for('consulta_turnos') }}" class="link-form">Puedes consultarlo haciendo click aquí.</a>
+                    <button id="reload-btn" class="volver-boton"><img src="{{ url_for('static', filename='imgs/arrow.png') }}" alt="Left arrow" class="volver-icon"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <p class="texto-footer">Copyright 2023 "Amigos Peludos" Veterinaria | Todos los Derechos Reservados | All Rights Reserved</p>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='imgs/logo-wpp.png') }}" alt="Whatsapp" class="logo-footer">
+            <img src="{{ url_for('static', filename='imgs/logo-ig.png') }}" alt="Instagram" class="logo-footer">
+            <img src="{{ url_for('static', filename='imgs/logo-twt.png') }}" alt="Twitter" class="logo-footer">
+        </div>
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0/build/global/luxon.min.js"></script>
+    <script src="{{ url_for('static', filename='js/form-registro-turno.js') }}"></script>
+</body>
+</html>
